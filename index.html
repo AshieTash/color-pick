@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Pick</title>
+</head>
+<body id="background">
+    <section id="main"></section>
+    <h1 id="colorNameLabel"></h1>
+    <label for="favcolor">Select your favorite color:</label>
+    <input type="color" id="color" value="#000000">
+    <input type="button" value="Done"  onclick="getValue()"/>
+
+    <h2 id="result"></h2>
+    <script>
+        var colors = [
+        {name: 'Red', code: '#ff0000' },
+        {name: 'Orange', code: '#ffa600' },
+        {name: 'Yellow', code: '#fbff00' }
+    ]
+         var mysteryColor = colors[Math.floor(Math.random() * 3)]
+
+       document.getElementById('colorNameLabel').innerHTML = mysteryColor.name
+
+
+        function getValue() {
+        var colorInput = document.getElementById("color")
+        var value = colorInput.value;
+
+        if (value == mysteryColor.code){
+             console.log(value)
+             console.log('correct')
+             document.getElementById('result').innerHTML = 'Correct'
+        }
+         else{
+              console.log(value)
+            console.log('incorrect')
+            document.getElementById('result').innerHTML = 'Incorrect'
+        }
+        }
+    </script>
+</body>
+</html>
