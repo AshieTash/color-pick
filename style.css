@@ -1,0 +1,18 @@
+#main{
+    background-color: #fff;
+    padding: 20px;
+    margin:  50px auto;
+    border-radius: 10px;
+}
+
+#red{
+    background-color: red;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#green{
+    background-color: green;
+}
